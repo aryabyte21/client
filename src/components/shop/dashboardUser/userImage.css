@@ -1,0 +1,48 @@
+.userImage{
+    width:60px;
+    aspect-ratio: 1;
+    margin: .5rem 1rem;
+}
+.userImage img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.userImage{
+    position: relative;
+}
+.userImage input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    z-index:4;
+    font-size:50px ;
+    opacity: 0;
+}
+/* @src/components/Modal.module.css */
+.addUserImageModal{
+    position: absolute;
+    top: 10%;
+    left:0;
+    width:100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: rgba(0,0,0,0.4);
+}
+.addUserImageModal form{
+    width: fit-content;
+    background-color: #ff3e4e;
+}
+.addUserImageModal button{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: black;
+}

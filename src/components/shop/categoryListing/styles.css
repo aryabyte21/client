@@ -1,0 +1,71 @@
+/* this is the css for the first file of the productListing  */
+
+.products {
+    position: relative;
+    width: 100%;
+    padding-top: 110px;
+}
+
+/* this is css for the second file of the productlisting  */
+
+.products2 {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* this is the css of the product card  */
+
+.container {
+    display: grid;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    transform: scale(0.98);
+    background-color:ghostwhite;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* to make the content visible at the bottom and not get hidden by the footer */
+/* .main-container {
+    padding-bottom: 150px;
+    margin-left: 8px;
+} */
+
+/* to give left margin */
+.first-container {
+    padding-bottom: 150px;
+    margin-left: 6px;
+}
+
+/* css for the part where we have ad  */
+
+.carousel
+{
+    padding-top: 8px;
+}
+
+/* this is for the text to describe the product */
+
+.text{
+    display: inline;
+    float: left;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* this is the css for the prica tag  */
+
+.tag{
+    display: inline;
+    float: right;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* this is the css for the image of the product  */
+
+.img{
+    display: flex;
+    justify-content: center;
+}

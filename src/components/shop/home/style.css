@@ -1,0 +1,161 @@
+/* Header section */
+.header {
+  padding-bottom: 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 12px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 75%;
+  background: #b7791f;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 75%;
+  background: #b7791f;
+  cursor: pointer;
+}
+
+/*  CSS for Categories */
+
+@media only screen and (max-width: 800px) {
+  .category {
+      /* padding-top: 5%;
+      padding-bottom: 5%; */
+      display: flex;
+      overflow-x: auto;
+  }
+
+  .category::-webkit-scrollbar {
+      width: 0;
+  }
+
+  .category .cat-item {
+      min-width: 64px;
+      line-height: 100px;
+      text-align: center;
+  }
+  
+
+  .cat-img {
+      border-radius: 50%;
+      width: 50%;
+      display: block;
+      margin: auto auto;
+    }
+  .cat-text {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  /* .category {
+      padding-top: 5%;
+      padding-bottom: 5%;
+  } */
+
+  .cat-img {
+      border-radius: 50%;
+      display: block;
+      width: 50%;
+      margin: auto auto;
+  }
+  .cat-text {
+      text-align: center;
+  }
+}
+
+.category {
+  padding-top: 70px; 
+}
+
+
+.carousel-item {
+  max-height: 150px;
+  border-radius: 30px 30px 30px 30px;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+/* Featured Products */
+
+/* .featured-product {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 100px;
+} */
+
+/* .recos {
+  width: 18rem;
+  padding: 50px 50px 50px 50px;
+  display: inline-block;
+} */
+
+.product-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.recommended-for-you {
+  padding-left: 20px;
+  float: left;
+}
+
+.view-all {
+  padding-right: 20px;
+  float: right;
+}
+
+.featured-products {
+  display: inline-block;
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.featured-products::-webkit-scrollbar {
+  width: 0;
+}
+
+.product-container {
+  max-width: 170px;
+  margin-left: 3px;
+  margin-right: 3px;
+  min-height: 150px;
+}
+
+.featured-img {
+  padding-top: 5px;
+  height: 75px;
+  width: 120px
+}
+
+.featured-text {
+  padding-top: 40px;
+}
+
+/* All Products */
+
+.all-products {
+  margin-top: 10px;
+}
+
+
+/* Product images from server */
+

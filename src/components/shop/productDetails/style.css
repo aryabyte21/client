@@ -1,0 +1,291 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 2.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+/* Half Rating System */
+
+/*.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+*/
+
+/* 
+<input type="radio" id="star4half" name="rating" defaultValue={4.5} /><label className="half" htmlFor="star4half" title="Pretty good - 4.5 stars" />
+
+<input type="radio" id="star3half" name="rating" defaultValue={3.5} /><label className="half" htmlFor="star3half" title="Meh - 3.5 stars" />
+
+<input type="radio" id="star2half" name="rating" defaultValue={3.0} /><label className="half" htmlFor="star2half" title="Kinda bad - 2.5 stars" />
+
+<input type="radio" id="star1half" name="rating" defaultValue={2.5} /><label className="half" htmlFor="star1half" title="Meh - 1.5 stars" />
+
+<input type="radio" id="starhalf" name="rating" defaultValue={0.5} /><label className="half" htmlFor="starhalf" title="Sucks big time - 0.5 stars" />
+*/
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating>input:checked~label,
+/* show gold star when clicked */
+.rating:not(:checked)>label:hover,
+/* hover current star */
+.rating:not(:checked)>label:hover~label {
+  color: #b7791f;
+}
+
+/* hover previous stars in list */
+
+.rating>input:checked+label:hover,
+/* hover current star when changing rating */
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+/* lighten current selection */
+.rating>input:checked~label:hover~label {
+  color: #b7791f;
+}
+
+/* css for the submenu at the top of the product description page  */
+
+.submenu-container{
+  padding-left: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* css for the product details  */
+
+
+.main-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 110px;
+
+}
+
+.main-container .big-img{
+  max-width: 500px;
+  min-width: 375px;
+}
+
+.big-img img{
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  padding-left: 2px;
+  /* display: block; */
+  /* object-fit: cover; */
+}
+
+.details .box{
+  max-width: 98%;
+  min-width: 290px;
+  margin: 25px;
+}
+
+.box .row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+
+.price-tag{
+  padding-top: 5px;
+  padding-left: 15px;
+  display: inline;
+  float: left;
+}
+
+.heading-tag{
+  text-align: left;
+  padding: auto 100px;
+}
+
+.description-box{
+  max-width: 500px;
+  min-width: 375px;
+  height: 50px;
+  max-height: 50px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.sellerInfo
+{
+  text-align: left;
+  padding-bottom: 5px;
+  padding-left: 4px;
+}
+
+/* css for the reveiw section  */
+
+.review-icon{
+  border-radius: 45%;
+  display: inline;
+  float: right;
+  padding-right: 5px;
+}
+
+.review-tag{
+  display: inline;
+  float: left;
+  padding-left: 5px;
+}
+
+/* The Modal */
+
+.modalBackground{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(red, green, blue, alpha);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer{
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.modalContainer .title{
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modalContainer .body{
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.modalContainer .footer
+{
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer .footer button{
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+#cancelBtn{
+  background-color: red;
+}
+
+/* The Close Button */
+/* .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+} */
+
+.reviewContainer{
+  padding-top: 40px;
+}
+
+.carousel-item {
+  max-height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 3px;
+}
+
+/* css for the featured section  */
+
+.product-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.recommended-for-you {
+  padding-left: 20px;
+  float: left;
+}
+
+.view-all {
+  padding-right: 20px;
+  float: right;
+}
+
+.featured-products {
+  display: inline-block;
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.featured-products::-webkit-scrollbar {
+  width: 0;
+}
+
+.product-container {
+  max-width: 170px;
+  height: 120px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.Featured-container{
+  display: flex;
+  overflow-x: scroll;
+}
+/* Gallery Navigation */
+.navbuttons{
+  position:absolute;
+  top: 40%;
+  z-index: 5;
+}
+.navbuttons.left{
+  left:-2rem;
+}
+.navbuttons.right{
+  right:-2rem;
+}
