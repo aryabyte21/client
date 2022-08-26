@@ -85,7 +85,7 @@ export const uploadCategoryImage = async (image) => {
     }
   }
   console.log(bodyFormData);
-  const url = 'http://localhost:8000/api/photo/add-category-photo';
+  const url = `${apiURL}/api/photo/add-category-photo`;
   await axios.post(url, bodyFormData, config)
     .then(async (response) => {
       imageIds = response.data['Files Object Id'];

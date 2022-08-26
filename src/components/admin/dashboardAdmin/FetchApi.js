@@ -61,7 +61,7 @@ export const uploadImage = async (image) => {
     }
   }
   console.log(bodyFormData);
-  const url = 'http://localhost:8000/api/photo/add-category-photo';
+  const url = `${apiURL}/api/photo/add-category-photo`;
   await axios.post(url, bodyFormData, config)
     .then(async (response) => {
       imageIds = response.data['Files Object Id'];
@@ -71,7 +71,7 @@ export const uploadImage = async (image) => {
   return imageIds;
 }
 export const uploadSliderImage = async (id) => {
-  const url = "http://localhost:8000/api/customize/upload-slide-image";
+  const url = `${apiURL}/api/customize/upload-slide-image`;
   const data = {'id':id}
   await axios.post(url,data).then(response => {
     return response
